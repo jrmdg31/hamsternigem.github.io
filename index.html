@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Card Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Game Card Calculator</h1>
+    <form>
+        <label for="cost">Enter the cost of the card:</label>
+        <input type="number" id="cost" required><br><br>
+        <label for="level">Enter the level of the card:</label>
+        <input type="number" id="level" required><br><br>
+        <label for="initial-payment">Was this card bought with initial payment? (1=yes, 0=no):</label>
+        <input type="number" id="initial-payment" required><br><br>
+        <label for="income">Enter the passive income per hour:</label>
+        <input type="number" id="income" required><br><br>
+        <label for="hours">Enter the number of hours:</label>
+        <input type="number" id="hours" required><br><br>
+        <button id="calculate-button">Calculate ROI</button>
+        <p id="result"></p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
