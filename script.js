@@ -16,12 +16,14 @@ function calculateROI() {
     const passiveIncome = parseFloat(incomeInput.value);
     const hours = parseFloat(hoursInput.value);
 
-    // Calculate the price increase based on the level
-    const priceIncreaseRatio = 1.13137;
-    const costAtLevel = cost * (priceIncreaseRatio ** (level - 1));
+    // Calculate the price to level up the card using the new formula
+    const a = 0.7; // coefficient a
+    const b = 2; // coefficient b
+    const c = 500; // coefficient c
+    const priceToLevelUp = a * cost + b * passiveIncome + c;
 
     // Calculate the ROI
-    const roi = (passiveIncome * hours) / costAtLevel;
+    const roi = (passiveIncome * hours) / priceToLevelUp;
 
     // Check if the card is a good investment
     if (roi > 1) {
